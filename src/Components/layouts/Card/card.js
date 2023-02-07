@@ -1,5 +1,9 @@
 import React from "react";
 import "./card.css";
+import Rating from '@mui/material/Rating';
+import Typography from '@mui/material/Typography';
+
+
 
 function Card() {
     return (
@@ -16,7 +20,7 @@ function Card() {
                 </div>
                 <div className="row">
                     <div className="rating">
-                        Rating
+                        <Rating name="half-rating-read" defaultValue={4.5} precision={0.5} />
                     </div>
                     <button className="see-details">
                         See Details
@@ -36,7 +40,7 @@ function Card() {
                 </div>
                 <div className="row">
                     <div className="rating">
-                        Rating
+                        <Rating name="half-rating-read" defaultValue={2.5} precision={0.5} />
                     </div>
                     <button className="see-details">
                         See Details
@@ -56,8 +60,9 @@ function Card() {
                 </div>
                 <div className="row">
                     <div className="rating">
-                        Rating
+                        <Rating name="half-rating-read" defaultValue={4} precision={0.5} />
                     </div>
+                    Rating
                     <button className="see-details">
                         See Details
                     </button>
