@@ -12,7 +12,7 @@ const Icon = props => {
 function Dropdown ({ placeHolder, options }) {
 
   const [showMenu, setShowMenu] = useState(false);
-  const [selectedValue, setSelectedValue ] = useState(null)
+  const [selectedValue, setSelectedValue ] = useState(null);
 
   useEffect(() => {
     const handler = () => setShowMenu(false);
@@ -48,7 +48,7 @@ function Dropdown ({ placeHolder, options }) {
       <div className="container">
       <div className="dropdown-container">
         <div onClick={handlerInputclick} className="dropdown-input">
-          <div className="dropdown-selected-value">{getDisplay()}</div>
+          <div className={`dropdown ${selectedValue ? 'selected' : ''}`}>{getDisplay()}</div>
           <div className="dropdown-tools">
             <div className="dropdown-tool">
               <Icon />

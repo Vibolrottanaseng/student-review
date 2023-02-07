@@ -6,7 +6,7 @@
   
 }
 .search  {
-  width: 70%;
+  width: 100%;
   margin: auto;
   justify-content: center;
   position: relative;
@@ -23,18 +23,27 @@
   }
   
   .search input {
-    width: 70%;
+    width: 100%;
     margin: auto;
     margin-top: 15px;
     background-color: white;
     border: 3px solid #ccc;
+
     border-radius: 10px;
     justify-content: space-between;
     font-size: 16px;
     padding: 10px;
-    height: 30px;
+    height: 50px;
   }
-  
+
+  .search input::placeholder{
+    color: #ccc;
+  }
+
+  .search input:focus {
+    outline: none;
+  }
+
   /* .searchIcon {
     height: 60px;
     width: 50px;
@@ -79,10 +88,10 @@
     text-decoration: none;
   }
    */
-  a:hover {
+  /* a:hover {
     background-color: lightgrey;
   }
   
   #clearBtn {
     cursor: pointer;
-  }
+  } */
