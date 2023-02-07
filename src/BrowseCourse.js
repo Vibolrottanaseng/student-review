@@ -4,6 +4,8 @@ import Dropdown from "./Components/UI/dropdown";
 import Searchbar from "./Components/UI/searchBar";
 import abac from "./assets/abac.png";
 import classes from "./App.css";
+import Card from "./Components/layouts/Card/card.js";
+
 
 function BrowseCourse() {
   const options = [
@@ -27,6 +29,7 @@ function BrowseCourse() {
       <main>
         <Dropdown placeHolder="Choose Faculty" options={options} />
         <Searchbar />
+        <Card />
       </main>
     </Fragment>
   );
