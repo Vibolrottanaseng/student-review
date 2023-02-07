@@ -62,7 +62,6 @@ function Card() {
                     <div className="rating">
                         <Rating name="half-rating-read" defaultValue={4} precision={0.5} />
                     </div>
-                    Rating
                     <button className="see-details">
                         See Details
                     </button>
