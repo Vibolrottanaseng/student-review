@@ -3,7 +3,6 @@ import Header from "./Components/layouts/Header/Header.js";
 import Dropdown from "./Components/UI/dropdown";
 import Searchbar from "./Components/UI/searchBar";
 import abac from "./assets/abac.png";
-import classes from "./App.css";
 import Card from "./Components/layouts/Card/card.js";
 
 
@@ -23,8 +22,8 @@ function BrowseCourse() {
   return (
     <Fragment>
       <Header />
-      <div className={classes["image-container"]}>
-        <img className={classes.image} src={abac} alt="abac" />
+      <div className="image=container">
+        <img className="image" src={abac} alt="abac" />
       </div>
       <main>
         <Dropdown placeHolder="Choose Faculty" options={options} />

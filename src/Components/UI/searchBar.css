@@ -1,39 +1,35 @@
-.container {
+.container-search{
   margin: auto;
   padding: 0 30px;
   max-width: 1080px;
   justify-content: center;
-  
 }
 .search  {
-  width: 100%;
   margin: auto;
   justify-content: center;
   position: relative;
   border-radius: 10px;
-  
 }
 .searchInputs {
   margin: auto;
-  padding: 5px;
+  padding: 10px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   user-select: none;
   }
   
   .search input {
-    width: 100%;
+    width: 98%;
     margin: auto;
     margin-top: 15px;
     background-color: white;
     border: 3px solid #ccc;
-
     border-radius: 10px;
-    justify-content: space-between;
+    justify-content: center;
     font-size: 16px;
     padding: 10px;
-    height: 50px;
+    height: 25px;
   }
 
   .search input::placeholder{
