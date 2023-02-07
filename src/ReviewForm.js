@@ -5,8 +5,11 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
 import Questions from "./questions.json";
+import Chip from "@mui/material/Chip";
+import Stack from "@mui/material/Stack";
+import TextField from "@mui/material/TextField";
+import Switch from "@mui/material/Switch";
 
 // import "./tailwind.css";
 import "./App.css";
@@ -14,10 +17,13 @@ import "./App.css";
 export default function ReviewForm() {
   const [value, setValue] = React.useState(2);
   const [selectedValue, setSelectedValue] = React.useState("a");
-  console.log("questions it is", Questions);
 
   const handleChange = (event) => {
     setSelectedValue(event.target.value);
+  };
+
+  const handleClick = () => {
+    console.info("You clicked the Chip.");
   };
 
   return (
@@ -112,9 +118,23 @@ export default function ReviewForm() {
               })}
             </RadioGroup>
           </FormControl>
-          <p className="question">
-            Evaluation Methods <span className="grey">(Please choose only 3 tags)</span>
-          </p>
+          <p className="question">Choose 3 tags to describe the course</p>
+          <Stack direction="row" spacing={1}>
+            {Questions.chips.map((chip) => {
+              return <Chip label={chip.chip} onClick={handleClick} />;
+            })}
+          </Stack>
+          <p className="question">Write a review</p>
+          {/* <TextField id="filled-basic" label="What would you like other student to know about this course?" variant="filled" /> */}
+
+          <textarea placeholder="     What would you like other student to know about this course?"></textarea>
+          <div className="anonymous">
+            <Switch />
+            <p>Review anonymously</p>
+          </div>
+          <div className="button-position">
+            <button className="button">Submit</button>
+          </div>
         </div>
       </div>
     </div>

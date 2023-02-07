@@ -14,7 +14,7 @@
 
 .form {
   margin-top: 100px;
-  margin-left: 40px; 
+  margin-left: 40px;
   margin-right: 40px;
   padding-bottom: 10px;
   background-color: white;
@@ -71,6 +71,40 @@ hr {
   color: red;
 }
 
-.grey {
-  color: gray
+input[type="text"],
+textarea {
+  background-color: #d1d1d1;
+  width: 80%;
+  padding-right: 30px;
+  border-radius: 20px;
+  height: 250px;
+}
+
+.anonymous {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.button {
+  background-color: #E9202D;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 120px;
+  text-align: center;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: 600 ;
+}
+
+.button-position {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-bottom: 40px;
 }
