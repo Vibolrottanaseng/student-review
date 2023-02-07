@@ -12,7 +12,7 @@ import TextField from "@mui/material/TextField";
 import Switch from "@mui/material/Switch";
 
 // import "./tailwind.css";
-import "./App.css";
+import "./ReviewForm.css";
 
 export default function ReviewForm() {
   const [value, setValue] = React.useState(2);
