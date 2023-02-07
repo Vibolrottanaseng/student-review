@@ -8,7 +8,7 @@ function Searchbar({ placeHolder, data }) {
       <div className="container-search">
         <div className="search">
           <div className="searchInput">
-            <input type="text" placeholder="Search Courses" />
+            <input placeholder="Search Courses" />
             <div className="searchIcon">
 
             </div>
