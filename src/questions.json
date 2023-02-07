@@ -72,5 +72,39 @@
             "id": 5,
             "field": "General Education"
         }
+    ],
+    "chips": [
+        {
+            "id": 1,
+            "chip": "ATTENDANCE IMPORTANT"
+        },
+        {
+            "id": 2,
+            "chip": "ASSIGNMENT HEAVY"
+        },
+        {
+            "id": 3,
+            "chip": "INDIVIDUAL PROJECT"
+        },
+        {
+            "id": 4,
+            "chip": "GROUP PROJECT"
+        },
+        {
+            "id": 5,
+            "chip": "QUIZ HEAVY"
+        },
+        {
+            "id": 6,
+            "chip": "MIDTERM EXAM"
+        },
+        {
+            "id": 7,
+            "chip": "FINAL EXAM"
+        },
+        {
+            "id": 8,
+            "chip": "TEXTBOOK MANDATORY"
+        }
     ]
 }
