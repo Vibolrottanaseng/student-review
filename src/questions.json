@@ -1,0 +1,76 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "q": "I consistently prepared for class."
+        },
+        {
+            "id": 2,
+            "q": "The course was well organized."
+        },
+        {
+            "id": 3,
+            "q": "The course follow the syllabus well."
+        },
+        {
+            "id": 4,
+            "q": "The workload for this course is appropriate."
+        },
+        {
+            "id": 5,
+            "q": "The instructors encouraged student participants in class. "
+        },
+        {
+            "id": 6,
+            "q": "The course has met my expectations."
+        },
+        {
+            "id": 7,
+            "q": "I would recommend this course to others. "
+        }
+    ],
+    "difficulties": [
+        {
+            "id": 1,
+            "level": "Easy"
+        },
+        {
+            "id": 2,
+            "level": "Moderate"
+        },
+        {
+            "id": 3,
+            "level": "Medium"
+        },
+        {
+            "id": 4,
+            "level": "Difficult"
+        },
+        {
+            "id": 5,
+            "level": "Very difficult"
+        }
+    ],
+    "fields": [
+        {
+            "id": 1,
+            "field": "Required"
+        },
+        {
+            "id": 2,
+            "field": "Major Elective"
+        },
+        {
+            "id": 3,
+            "field": "Minor Elective"
+        },
+        {
+            "id": 4,
+            "field": "Free Elective"
+        },
+        {
+            "id": 5,
+            "field": "General Education"
+        }
+    ]
+}
