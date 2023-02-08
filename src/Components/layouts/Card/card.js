@@ -1,7 +1,7 @@
 import React from "react";
 import "./card.css";
 import Rating from '@mui/material/Rating';
-import Typography from '@mui/material/Typography';
+
 
 
 
