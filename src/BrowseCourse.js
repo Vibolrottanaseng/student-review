@@ -22,7 +22,7 @@ function BrowseCourse() {
   return (
     <Fragment>
       <Header />
-      <div className="image=container">
+      <div className="image-container">
         <img className="image" src={abac} alt="abac" />
       </div>
       <main>
