@@ -5,8 +5,14 @@ import Searchbar from "./Components/UI/searchBar";
 import abac from "./assets/abac.png";
 import Card from "./Components/layouts/Card/card.js";
 
-
 function BrowseCourse() {
+  fetch('http://20.219.131.156:8000/api/get-course')
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+
   const options = [
     { value: "NUR", label: "School of Management and Economics" },
     { value: "ARC", label: "School of Architecture and Design" },
