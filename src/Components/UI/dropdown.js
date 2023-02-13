@@ -1,4 +1,4 @@
-import React, {Fragment, useEffect, useState} from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import "./dropdown.css";
 
 const Icon = props => {
@@ -9,10 +9,10 @@ const Icon = props => {
   );
 };
 
-function Dropdown ({ placeHolder, options }) {
+function Dropdown({ placeHolder, options, filterFaculty }) {
 
   const [showMenu, setShowMenu] = useState(false);
-  const [selectedValue, setSelectedValue ] = useState(null);
+  const [selectedValue, setSelectedValue] = useState(null);
 
   useEffect(() => {
     const handler = () => setShowMenu(false);
@@ -22,10 +22,12 @@ function Dropdown ({ placeHolder, options }) {
       window.removeEventListener("click", handler);
     };
   });
+
   const handlerInputclick = (e) => {
     e.stopPropagation();
     setShowMenu(!showMenu);
   };
+
   const getDisplay = () => {
     if (selectedValue) {
       return selectedValue.label;
@@ -35,34 +37,36 @@ function Dropdown ({ placeHolder, options }) {
 
   const onItemClick = (option) => {
     setSelectedValue(option);
+    filterFaculty(option.label);
   };
 
   const isSelected = (option) => {
     if (!selectedValue) {
-    return false;
-  }
+      return false;
+    }
     return selectedValue.value === option.value;
   }
+
   return (
     <Fragment>
       <div className="container">
-      <div className="dropdown-container">
-        <div onClick={handlerInputclick} className="dropdown-input">
-          <div className={`dropdown ${selectedValue ? 'selected' : ''}`}>{getDisplay()}</div>
-          <div className="dropdown-tools">
-            <div className="dropdown-tool">
-              <Icon />
+        <div className="dropdown-container">
+          <div onClick={handlerInputclick} className="dropdown-input">
+            <div className={`dropdown ${selectedValue ? 'selected' : ''}`}>{getDisplay()}</div>
+            <div className="dropdown-tools">
+              <div className="dropdown-tool">
+                <Icon />
+              </div>
             </div>
           </div>
+          {showMenu && (
+            <div className="dropdown-menu">
+              {options && options.map((option) => (<div onClick={() => onItemClick(option)} key={option.value} className={`dropdown-item ${isSelected(option) && "selected"}`}> {option.label}
+              </div>
+              ))}
+            </div>
+          )}
         </div>
-        {showMenu && (
-          <div className="dropdown-menu">
-            {options && options.map((option) => (<div onClick = {() => onItemClick(option)}key={option.value} className={`dropdown-item ${isSelected(option) && "selected" }`}> {option.label} 
-            </div>
-            ))}
-          </div>
-        )}
-      </div>
       </div>
     </Fragment>
   );
