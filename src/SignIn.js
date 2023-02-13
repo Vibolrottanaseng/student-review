@@ -15,7 +15,7 @@ import abaccl from './assets/abaccl.png';
 
 const theme = createTheme();
 
-export default function SignInSide() {
+export default function SignInS() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -98,8 +98,6 @@ export default function SignInSide() {
                             >
                                 Sign In
                             </Button>
-
-
                         </Box>
                     </Box>
                 </Grid>
