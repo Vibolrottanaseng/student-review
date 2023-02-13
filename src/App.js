@@ -4,7 +4,7 @@ import BrowseCourse from "./BrowseCourse.js";
 import ReviewForm from "./ReviewForm.js";
 import './App.css';
 import SignInSide from "./SignIn.js";
-
+import SignUp from "./SignUp.js";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
         <Route path="/" element={<BrowseCourse />} />
         <Route path="form" element={<ReviewForm />} />
         <Route path='SignIn' element={<SignInSide />} />
+        <Route path='SignUp' element={<SignUp />} />
       </Routes>
     </div>
   );
