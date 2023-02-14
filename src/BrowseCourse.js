@@ -6,26 +6,30 @@ import abac from "./assets/abac.png";
 import Card from "./Components/layouts/Card/card.js";
 
 const options = [
-  { value: "NUR", label: "School of Management and Economics" },
-  { value: "ARC", label: "School of Architecture and Design" },
-  { value: "VMS", label: "School of Science and Technology" },
-  { value: "CA", label: "School of Communication Art" },
-  { value: "NUR", label: "School of Nursing Science" },
-  { value: "VME", label: "School of Engineering" },
-  { value: "MSME", label: "School of Business" },
-  { value: "Art", label: "School of Arts" },
-  { value: "MU", label: "School of Music" },
-  { value: "LAW", label: "School of Law" },
+  { value: "NUR", label: "Vincent Mary School of Management and Economics" },
+  { value: "ARC", label: "Montfort Del Rosario School of Architecture and Design" },
+  { value: "VMS", label: "Vincent Mary School of Science and Technology" },
+  { value: "CA", label: "Albert Laurance School of Communication Art" },
+  { value: "NUR", label: "Bernadette de Lourdes School of Nursing Science" },
+  { value: "VME", label: "Vincent Mary School of Engineering" },
+  { value: "MSME", label: "Martin de Tours School of Management and Economics" },
+  { value: "Art", label: "Theodore Maria School of Arts" },
+  { value: "MU", label: "Louis Nobiron School of Music" },
+  { value: "LAW", label: "Thomas Aquinas chool of Law" },
 ];
 
 function BrowseCourse() {
   const [courses, setCourses] = useState([]);
+  const [filteredCourses, setFilteredCourses] = useState([]);
+  const [searchedCourses, setSearchedCourses] = useState([]);
 
   useEffect(() => {
-    fetch('http://20.219.131.156:8000/api/get-course')
+    fetch('http://20.219.131.156:8000/api/v1/get-course')
       .then((response) => response.json())
       .then((data) => {
         setCourses(data);
+        setFilteredCourses(data);
+        setSearchedCourses(data);
       })
       .catch((error) => {
         console.error('Error:', error);
@@ -33,8 +37,19 @@ function BrowseCourse() {
   }, []);
 
   const filterFaculty = (option) => {
-    // const newCourses = courses.filter(course => course.faculty_name.toLowerCase() === option.toLowerCase());
-    // setCourses(newCourses);
+    const filteredCourses = courses.filter(course => course.faculty_name.toLowerCase() === option.toLowerCase());
+    setFilteredCourses(filteredCourses);
+    search('');
+  }
+
+  const search = (query) => {
+    const result = [];
+    filteredCourses.forEach(course => {
+      if (course.course_name.toLowerCase().includes(query) || course.course_code.toLowerCase().includes(query)) {
+        result.push(course);
+      }
+    });
+    setSearchedCourses(result);
   }
 
   return (
@@ -45,8 +60,8 @@ function BrowseCourse() {
       </div>
       <main>
         <Dropdown placeHolder="Choose Faculty" options={options} filterFaculty={filterFaculty} />
-        <Searchbar />
-        <Card courses={courses} />
+        <Searchbar search={search} />
+        <Card courses={searchedCourses} />
       </main>
     </Fragment>
   );
