@@ -1,0 +1,29 @@
+.course-container {
+    padding: 40px;
+    margin: 55px auto;
+    width: 1080;
+    justify-content: flex-start;
+}
+
+.course-title {
+    margin-top: 5px;
+    font-size: 25px;
+    color: black;
+}
+.faculty {
+    margin-top: 5px;
+    font-size: 18px;
+    color: grey;
+}
+
+.hr1 {
+    border-top: 1px solid grey;
+    border-radius: round;
+}
+
+.summary {
+    font-size: 25px;
+    font-weight: 700;
+    color: black;
+}
+

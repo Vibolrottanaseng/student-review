@@ -18,7 +18,7 @@ function Card({ courses }) {
                     </div>
                     <div className="row">
                         <div className="rating">
-                            <Rating name="half-rating-read" defaultValue={4.5} precision={0.5} />
+                            <Rating name="half-rating-read" defaultValue={4.5} precision={0.5} readOnly />
                         </div>
                         <button className="see-details">
                             See Details

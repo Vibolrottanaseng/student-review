@@ -5,6 +5,7 @@ import ReviewForm from "./ReviewForm.js";
 import './App.css';
 import SignIn from "./SignIn.js";
 import SignUp from "./SignUp.js";
+import Result from '../src/Components/layouts/Result'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="form" element={<ReviewForm />} />
         <Route path='SignIn' element={<SignIn />} />
         <Route path='SignUp' element={<SignUp />} />
+        <Route path='Result' element={<Result />} />
       </Routes>
     </div>
   );
