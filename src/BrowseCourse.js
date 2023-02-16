@@ -5,6 +5,7 @@ import Searchbar from "./Components/UI/searchBar";
 import abac from "./assets/abac.png";
 import Card from "./Components/layouts/Card/card.js";
 
+
 const options = [
   { value: "NUR", label: "Vincent Mary School of Management and Economics" },
   { value: "ARC", label: "Montfort Del Rosario School of Architecture and Design" },
@@ -63,6 +64,7 @@ function BrowseCourse() {
         <Searchbar search={search} />
         <Card courses={searchedCourses} />
       </main>
+      <h1 className="text-3l font-bold underline">Hello World</h1>
     </Fragment>
   );
 }
