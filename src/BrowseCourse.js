@@ -7,7 +7,6 @@ import Card from "./Components/layouts/Card/card.js";
 
 
 const options = [
-  { value: "NUR", label: "Vincent Mary School of Management and Economics" },
   { value: "ARC", label: "Montfort Del Rosario School of Architecture and Design" },
   { value: "VMS", label: "Vincent Mary School of Science and Technology" },
   { value: "CA", label: "Albert Laurance School of Communication Art" },
