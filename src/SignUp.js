@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useState } from "react";
 import axiosInstance from "./axios";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 // Material UI
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -19,12 +19,12 @@ import NativeSelect from "@mui/material/NativeSelect";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import Link from "@mui/material/Link";
-import Alert from '@mui/material/Alert';
+import Alert from "@mui/material/Alert";
 
 const theme = createTheme();
 
 export default function SignUp() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const initialFormData = Object.freeze({
     firstName: "",
@@ -33,7 +33,7 @@ export default function SignUp() {
     email: "",
     password: "",
     confirmPassword: "",
-    faculty: ""
+    faculty: "",
   });
 
   const [formData, updateFormData] = useState(initialFormData);
@@ -56,14 +56,15 @@ export default function SignUp() {
       .then((res) => {
         navigate("/SignIn");
         if (res.status == 201) {
-            alert("Account Created Successfully.")
+          alert("Account Created Successfully.");
         }
         console.log(res);
         console.log(res.data);
-      }).catch((error) => {
+      })
+      .catch((error) => {
         if (error.response) {
-            console.log(error.response.data);
-            alert(JSON.stringify(error.response.data));
+          console.log(error.response.data);
+          alert(JSON.stringify(error.response.data));
         }
       });
   };
